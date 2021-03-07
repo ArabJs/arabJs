@@ -1,0 +1,44 @@
+{
+  "name": "homepage",
+  "version": "0.1.0",
+  "dependencies": {
+    "@codemirror/basic-setup": "^0.17.1",
+    "@codemirror/lang-javascript": "^0.17.1",
+    "@codemirror/state": "^0.17.2",
+    "@codemirror/stream-parser": "^0.17.1",
+    "@codemirror/theme-one-dark": "^0.17.5",
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
+    "@uiw/react-codemirror": "^3.0.5",
+    "console-feed": "^3.2.1",
+    "escodegen": "^2.0.0",
+    "jss-rtl": "^0.3.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "arabjs",
+  "version": "0.0.3",
+  "description": "ArabJs transpiler",
+  "main": "index.js",
+  "module": "index.js",
+  "homepage": "https://arabJs.github.io/arabJs/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arabJs/arabJs"
+  },
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "rollup -c rollup.config.js",
+    "clean-build": "npm run clean && npm run build",
+    "prepublish": "npm run clean-build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "rollup": "^0.45.0",
+    "rollup-plugin-buble": "^0.16.0"
+  },
+  "dependencies": {
+    "escodegen": "^1.11.1"
+  }
+}

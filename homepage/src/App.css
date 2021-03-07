@@ -1,0 +1,62 @@
+.cm-wrap {
+  height: 100%;
+  padding: 5px;
+}
+.cm-scroller {
+  overflow: auto;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.hero {
+   /* Sizing */
+   width: 100vw;
+   height: 100vh;
+   
+   /* Flexbox stuff */
+   display: grid;
+   
+   /* Text styles */
+   text-align: center;
+   color: white;
+   
+   /* Background styles */
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),  url("arabJs.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;    
+
+   font-family: 'Reem Kufi', sans-serif;
+  }
+.title {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 100px;
+  align-self: flex-end;
+}
+.subTitle {
+  font-family: sans-serif;
+  font-size: 50px; 
+}
+.controls {
+  display: grid;
+  grid-template-columns: minmax(10px, 200px);
+  grid-auto-rows: repeat(2, 1fr);
+  align-items: center;
+  padding-right: 2px;
+  }
+  .oneControl {
+  grid-column: 1 ;
+  grid-row: 1;
+  }
+  .secondoneControl {
+    grid-column: 1 ;
+    grid-row: 2;
+  }
+  .thirdoneControl {
+    grid-column: 2;
+    grid-row: 2;
+  }
