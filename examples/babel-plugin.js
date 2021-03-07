@@ -1,4 +1,4 @@
-const { ChavascriptBabelPlugin } = require('../dist/chavascript-parser');
+const { ChavascriptBabelPlugin } = require('../dist/arabJs-parser');
 const babel = require('@babel/core');
 
 const inputCode = `
