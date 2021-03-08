@@ -1,6 +1,6 @@
 {
   "name": "arabjs",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "ArabJs transpiler",
   "main": "index.js",
   "module": "index.js",
