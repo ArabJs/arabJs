@@ -30,3 +30,7 @@ arabjs.run(code);
 ```javascript
 5
 ```
+# Credit:
+This work is built on top of amazing open source projects:
+- [Chavascript](https://github.com/ChavaScript/chavascript)
+- [CodeMirror](https://github.com/codemirror/codemirror.next)
