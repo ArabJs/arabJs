@@ -13,8 +13,7 @@ const snippets = [
   `
 // متتالية فيبوناتشي
 
-داله متتالية_فيبوناتشي (رقم)
-{  
+داله متتالية_فيبوناتشي (رقم){  
   اذا (رقم <= 1 )
   	الجواب رقم
   الجواب  متتالية_فيبوناتشي (رقم - 1) +  متتالية_فيبوناتشي(رقم - 2)
@@ -28,7 +27,7 @@ const snippets = [
   // 
   `
 // ترتيب الدول حسب نسبة الوفاة استناداً
-//على الاصابة بفيروس كورونا المستجد  
+// على الاصابة بفيروس كورونا المستجد 
 لنفرض الرابط = "https://covid19-api.com/country/all?format=json"
 لنفرض حمل_المعلومات = (الرابط) => حمل(الرابط).ثم(البيانات => البيانات.الى_جيسون())
 لنفرض نقح_البيانات = (البيانات) => البيانات.نقح(({country,confirmed,deaths}) => ({الدولة : country , نسبة_الوفاة :deaths/confirmed*100}))
@@ -46,8 +45,10 @@ const snippets = [
   //
   ,
   //
-  `// ترتيب الدول حسب نسبة الوفاة استناداً
-  //على الاصابة بفيروس كورونا المستجد  
+  `
+  // نمذجة نسبة الوفاة للدول العربية استناداً
+  // على الاصابة بفيروس كورونا المستجد
+  // البرنامج يستخدم مكتبة D3 لنمذجة البيانات
   لنفرض الرابط = "https://covid19-api.com/country/all?format=json"
   لنفرض حمل_المعلومات = (الرابط) => حمل(الرابط).ثم(البيانات => البيانات.الى_جيسون())
   لنفرض نقح_البيانات = (البيانات) => البيانات.نقح(({country,confirmed,deaths}) =>
@@ -125,8 +126,8 @@ const snippets = [
 
 
 const useStyles = makeStyles((theme) => ({
-  button: {
-    display: 'block',
+  label: {
+    display: "block",
     marginTop: theme.spacing(2),
   },
   formControl: {
@@ -156,9 +157,9 @@ export default function CodeSnipts({ onCodeChange }) {
 
   return (
     <div>
-      <Button className={classes.button} onClick={handleOpen}>
+      <label className={classes.label}>
         أختر برنامج
-      </Button>
+      </label>
       <FormControl className={classes.formControl}>
         <Select
           labelId="demo-controlled-open-select-label"
@@ -171,8 +172,8 @@ export default function CodeSnipts({ onCodeChange }) {
         >
           <MenuItem value={0}>اهلاً بالعالم</MenuItem>
           <MenuItem value={1}>متتالية فيبوناتشي</MenuItem>
-          <MenuItem value={2}>ترتيب الدول على حسب نسبة الوفياة بكورونا</MenuItem>
-          <MenuItem value={3}>نمذجة نسبة الوفياة للدول العربية</MenuItem>
+          <MenuItem value={2}>ترتيب الدول على حسب نسبة الوفيات بكورونا</MenuItem>
+          <MenuItem value={3}>نمذجة نسبة الوفيات للدول العربية</MenuItem>
         </Select>
       </FormControl>
     </div>

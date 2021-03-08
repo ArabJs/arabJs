@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import arabJs from "./arabJs/index";
+import arabJs from "arabjs";
 import CodeSnippets from "./CodeSnippets";
 import EditorArabJS from "./EditorArabJS";
 import EditorJS from "./EditorJS";
@@ -113,6 +113,10 @@ export default function App() {
       <div className="hero">
         <div className="title">عرب.جس</div>
         <div className="subTitle"> برمج جافا سكربت باللغة العربية</div>
+        <div className="npm">
+          <div>للتحميل</div>
+          <code className="code"> npm i arabjs </code>
+        </div>
       </div>
       <div className="controls" >
         <div className="oneControl">
