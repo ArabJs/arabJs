@@ -2,7 +2,7 @@
 
 The ArabJs transpiler
 
-https://arabjs.github.io/arabjs
+https://arabjs.github.io/arabJs/
 
 # Installation
 
@@ -19,8 +19,8 @@ const code = `
  داله جمع(س,ص) {
    الجواب س + ص
 }
-لنفرض النتيحة = جمع(2,3)
-اطبع.نص(النتيح
+لنفرض النتيجة = جمع(2,3)
+اطبع.نص(النتيجة)
 `;
 arabjs.run(code);
 
