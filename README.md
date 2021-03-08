@@ -22,9 +22,11 @@ const code = `
 لنفرض النتيجة = جمع(2,3)
 اطبع.نص(النتيجة)
 `;
-arabjs.run(code);
 
-result
+arabjs.run(code);
 ```
+
+## result
+```javascript
 5
 ```
