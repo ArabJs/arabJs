@@ -109,7 +109,7 @@ export default function App() {
       }));
   }
   return (
-    <div className="App">
+    <>
       <div className="hero">
         <div className="title">عرب.جس</div>
         <div className="subTitle"> برمج جافا سكربت باللغة العربية</div>
@@ -118,55 +118,57 @@ export default function App() {
           <code className="code"> npm i arabjs </code>
         </div>
       </div>
-      <div className="controls" >
-        <div className="oneControl">
-          <CodeSnippets onCodeChange={(finalCode, target) => { changeEditorContent(finalCode); setArabJsCode(finalCode); setTarget(target); setLoadingText(""); }}></CodeSnippets>
-        </div>
-        <div className="secondoneControl">
-          <Typography component="div">
-            <Grid component="label" container alignItems="center" spacing={1}>
-              <Grid item>ArabJs</Grid>
-              <Grid item>
-                <AntSwitch checked={isArabJSCode} onChange={() => {
-                  if (isArabJSCode) {
-                    let localCode = editor.current.state.doc.toString();
-                    setArabJsCode(localCode);
-                    try {
-                      setJSCode(arabJs.transpile(localCode));
-                    } catch (erro) {
-                      setJSCode(`*/Invalid ArabJs code!*/`);
+      <div className="app">
+        <div className="controls" >
+          <div className="oneControl">
+            <CodeSnippets onCodeChange={(finalCode, target) => { changeEditorContent(finalCode); setArabJsCode(finalCode); setTarget(target); setLoadingText(""); }}></CodeSnippets>
+          </div>
+          <div className="secondoneControl">
+            <Typography component="div">
+              <Grid component="label" container alignItems="center" spacing={1}>
+                <Grid item>ArabJs</Grid>
+                <Grid item>
+                  <AntSwitch checked={isArabJSCode} onChange={() => {
+                    if (isArabJSCode) {
+                      let localCode = editor.current.state.doc.toString();
+                      setArabJsCode(localCode);
+                      try {
+                        setJSCode(arabJs.transpile(localCode));
+                      } catch (erro) {
+                        setJSCode(`*/Invalid ArabJs code!*/`);
 
-                      console.error(erro)
+                        console.error(erro)
+                      }
                     }
+                    setIsArabJsCode(!isArabJSCode);
                   }
-                  setIsArabJsCode(!isArabJSCode);
-                }
-                } name="checkedC" />
+                  } name="checkedC" />
+                </Grid>
+                <Grid item>JavaScript</Grid>
               </Grid>
-              <Grid item>JavaScript</Grid>
-            </Grid>
-          </Typography>
-        </div>
-        <div className= "thirdoneControl">
-          <Button
-            variant="contained"
-            color="default"
-            className={classes.button}
-            startIcon={<PlayArrow />}
-            onClick={runCode}
-          >
-            نفذ البرنامج
+            </Typography>
+          </div>
+          <div className="thirdoneControl">
+            <Button
+              variant="contained"
+              color="default"
+              className={classes.button}
+              startIcon={<PlayArrow />}
+              onClick={runCode}
+            >
+              نفذ البرنامج
       </Button>
+          </div>
         </div>
+        {isArabJSCode ?
+          <EditorArabJS code={arabJSCode} editor={editor} ></EditorArabJS> :
+          <EditorJS code={JScode}  ></EditorJS>}
+
+        <br />
+
+        {targetRender()}
       </div>
-      {isArabJSCode ?
-        <EditorArabJS code={arabJSCode} editor={editor} ></EditorArabJS> :
-        <EditorJS code={JScode}  ></EditorJS>}
-
-      <br />
-
-      {targetRender()}
-    </div>
+    </>
 
   );
 }

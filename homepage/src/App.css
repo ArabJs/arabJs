@@ -1,3 +1,10 @@
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 .cm-wrap {
   height: 100%;
   padding: 5px;
@@ -5,11 +12,8 @@
 .cm-scroller {
   overflow: auto;
 }
-body {
-    margin: 0;
-    font-family: sans-serif;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+.app {
+  padding: 5px;
 }
 .npm {
   font-size: 20px; 
